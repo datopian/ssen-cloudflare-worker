@@ -14,6 +14,7 @@ var worker_default = {
       const listing = await env.SSEN_BUCKET.list({ prefix: key });
       listing.objects = listing.objects.map((e) => ({
         ...e,
+        "Content-Type": "text/csv",
         downloadLink: env.PUBLIC_BUCKET_URI + e.key
       }));
       return new Response(JSON.stringify(listing), { headers });
