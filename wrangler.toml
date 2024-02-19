@@ -1,0 +1,13 @@
+name = "ssen-smart-meter"
+main = "src/worker.js"
+compatibility_date = "2023-10-22"
+workers_dev = true
+usage_model = "unbound"
+
+[vars]
+PUBLIC_BUCKET_URI = "https://ssen-smart-meter.portaljs.com/"
+
+[[r2_buckets]]
+binding = "SSEN_BUCKET"
+bucket_name = "ssen-smart-meter"
+jurisdiction = "eu"
